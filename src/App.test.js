@@ -1,8 +1,21 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from "@testing-library/react";
+import App from "./App";
+import isClassComponent from "./helpers/isClassComponent";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe("<App />", () => {
+  beforeEach(() => {
+    render(<App />);
+  });
+
+  it("renders a Feed", () => {
+    screen.getByTestId("feed");
+  });
+
+  it("renders a Contacts List", () => {
+    screen.getByTestId("contact-list");
+  });
+
+  it("has been refactored as a class component", () => {
+    expect(isClassComponent(App)).toBe(true);
+  });
 });

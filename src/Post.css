@@ -1,0 +1,12 @@
+.Post {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  text-align: center;
+  border: 2px dashed #ccc;
+  width: 90%;
+}
+
+.Post img {
+  width: 200px;
+  height: 200px;
+}

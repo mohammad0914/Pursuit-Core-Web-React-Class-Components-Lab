@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# React Class Components Lab
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Getting Started
 
-## Available Scripts
+- Fork this repo
+- Clone the forked repository
+- `cd` to the directory where you cloned it
+- `npm install` to install dependencies
+- `npm start` to run the website on `localhost:3000`
+- `npm run test` to run tests
 
-In the project directory, you can run:
+> _Note_: Remember to `git add`, `git commit` and `git push` regularly
 
-### `npm start`
+## Submission Guidelines
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- When finished, commit and push your work.
+- Make a pull request on github.
+- Submit the link to your pull request on Canvas.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Instructions
 
-### `npm test`
+In this lab, you will **refactor** some React function components so that they are React class components.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Run the app using `npm start`. Go to `localhost:3000` in your browser and you will see a very basic social media feed.
 
-### `npm run build`
+Take a look at the components in the `src` folder. You should see `.js`, `.css`, and `.test.js` files for these components:`Ad`, `App`, `ContactList`, `Feed`, and `Post`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Run the tests with `npm test`. You will notice that each test fails for the same assertion: `<Component /> has been refactored as a class component.`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+You can fix that by refactoring each component as a class component!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Change the code in the existing component file (e.g. `App.js`, `Post.js`). Do not create a new file or rename the file.
+- The appearance of the app in your browser should not change.
+- All of the tests should pass.
+- Don't forget to include the `data-testid` attribute in each component's top level `<div>`. The tests need this!
 
-### `npm run eject`
+## Bonus 1
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Add an `Profile` section to the social media app.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- It should be as a separate `<Profile />` component.
+- It should be a React class component.
+- It should include a person's photo, name, and short bio.
+- Render the `<Profile />` component from the `<App />` component.
+- The `<Profile />` should appear to the right of the `<ContactList />`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Bonus 2
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Refactor the profile page you made in [the React Introduction Lab](https://github.com/joinpursuit/Pursuit-Core-Web-React-Introduction-Lab) so that **all of the components are class components**.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- All components should be React class components (not function components)
+- Your lab should still look the same way it did before in the web browser.
+- All of the unit tests should pass on your computer.
+- All of the unit tests should still pass
