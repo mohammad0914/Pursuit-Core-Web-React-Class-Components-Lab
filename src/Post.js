@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import "./Post.css";
 
 const postInfo = {
@@ -7,14 +7,29 @@ const postInfo = {
   description: "This is the description of the post",
 };
 
-const Post = () => {
-  return (
-    <div className="Post" data-testid="post">
+// const Post = () => {
+//   return (
+//     <div className="Post" data-testid="post">
+//       <p>{postInfo.title}</p>
+//       <img src={postInfo.imageLink} alt="post" />
+//       <p>{postInfo.description}</p>
+//     </div>
+//   );
+// };
+
+class Post extends Component{
+  constructor(){
+    super()
+  }
+
+  render(){
+    return  <div className="Post" data-testid="post">
+   
       <p>{postInfo.title}</p>
       <img src={postInfo.imageLink} alt="post" />
       <p>{postInfo.description}</p>
-    </div>
-  );
-};
+    </div>;
+  }
+}
 
 export default Post;
